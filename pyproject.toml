@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "fs-encrypted"
+version = "0.1.0"
+description = ""
+authors = ["patrick o'leary <pjaol@pjaol.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fs = "^2.4.16"
+cryptography = "^41.0.7"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.0.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
