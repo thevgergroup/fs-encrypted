@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fs-encrypted"
-version = "0.1.1"
+version = "0.0.0"
 description = "An encrypted filesystem for python using PYFilesystem2"
 authors = ["patrick o'leary <pjaol@pjaol.com>"]
 readme = "README.md"
@@ -23,6 +23,9 @@ cryptography = "^41.0.7"
 [tool.poetry.group.dev.dependencies]
 jupyterlab = "^4.0.9"
 
+
+[tool.poetry-dynamic-versioning]
+enable = true
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"

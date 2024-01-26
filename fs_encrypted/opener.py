@@ -12,9 +12,11 @@ class EncryptedOpener(Opener) :
 
     def open_fs(self, fs_url: Text, parse_result: ParseResult, writeable: bool, create: bool, cwd: Text) -> FS:
         path = parse_result.path
+        resource = parse_result.resource
+        
         key = parse_result.params.get("key")
+        file_system = resource.split("/")[0]
         
-        
-        return EncryptedFS(path, key)
+        return EncryptedFS(resource, key)
     
 registry.install(EncryptedOpener)
