@@ -15,7 +15,7 @@ classifiers= [
                 ]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.9"
 fs = "^2.4.16"
 cryptography = "^41.0.7"
 
