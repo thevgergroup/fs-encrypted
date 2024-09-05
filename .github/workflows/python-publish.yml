@@ -26,6 +26,11 @@ jobs:
       with:
         name: python-package-distributions
         path: dist/
+    - name: Setup Env
+      run: |
+        python3 -m pip install poetry
+        poetry install
+
     - name: Test Build
       run: >-
         python3 -m unittest tests/test_fs-enc.py
