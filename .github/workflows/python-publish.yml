@@ -28,7 +28,7 @@ jobs:
         path: dist/
     - name: Test Build
       run: >-
-        python3 -m unittest tests/test_fs_encrypted.py
+        python3 -m unittest tests/test_fs-enc.py
 
   publish-to-pypi:
     name: >-
