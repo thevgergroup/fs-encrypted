@@ -30,10 +30,11 @@ jobs:
       run: |
         python3 -m pip install poetry
         poetry install
+        poetry add pytest
 
     - name: Test Build
       run: >-
-        python3 -m unittest tests/test_fs-enc.py
+        poetry run pytest
 
   publish-to-pypi:
     name: >-
